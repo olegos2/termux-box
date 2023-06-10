@@ -40,7 +40,7 @@ rm -rf rootfs.tar.xz
 
 cd $HOME/Box4Droid/ubuntu-fs/opt
 wget https://github.com/olegos2/termux-box/raw/main/scripts.tar.gz &>/dev/null
-tar -xvf scripts.tar.gz
+tar -xf scripts.tar.gz
 rm -rf scripts.tar.gz
 
 cd $HOME/Box4Droid/
