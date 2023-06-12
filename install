@@ -13,6 +13,7 @@ fi
 sleep 1
 done
 mkdir -p storage/shared/termux-box
+pkg clean
 pkg update -y
 sleep 2
 echo ""
