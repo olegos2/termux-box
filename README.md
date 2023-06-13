@@ -11,7 +11,7 @@ Open termux and paste command
 
 `cd && curl -o install https://raw.githubusercontent.com/olegos2/termux-box/main/install && chmod +x install && ./install`
 
-##
+#
 Big thanks to Hugo for help
 
 ## Third party applications
