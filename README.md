@@ -1,6 +1,6 @@
 ## About
 
-Termux-box is a script to install preconfigured rootfs with [Box86](https://github.com/ptitSeb/box86), [Box64](https://github.com/ptitSeb/box64), [Wine](https://www.winehq.org/) and [DXVK](https://github.com/doitsujin/dxvk) installed. Currently no chroot or virgl version of rootfs.
+Termux-box is a script to install preconfigured rootfs with [Box86](https://github.com/ptitSeb/box86), [Box64](https://github.com/ptitSeb/box64), [Wine](https://www.winehq.org/) and [DXVK](https://github.com/doitsujin/dxvk) installed. Currently no chroot or virgl version of rootfs available.
 
 ## Installation
 Download and install
