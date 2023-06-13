@@ -1,8 +1,28 @@
-Based on [Box4Droid](https://github.com/Herick75/Box4Droid)
+## About
 
-## Install
+Termux-box is a script to install preconfigured rootfs with [Box86](https://github.com/ptitSeb/box86), [Box64](https://github.com/ptitSeb/box64), [Wine](https://www.winehq.org/) and [DXVK](https://github.com/doitsujin/dxvk) installed. Currently no chroot or virgl version of rootfs.
+
+## Installation
 Download and install
 [Termux](https://f-droid.org/en/packages/com.termux),
 [Termux-X11](https://github.com/termux/termux-x11/suites/13458717269/artifacts/738383219)
 
 Open termux and paste command `cd && curl -o install https://raw.githubusercontent.com/olegos2/termux-box/main/install && chmod +x install && ./install`
+
+## Third party applications
+
+[Box4Droid](https://github.com/Herick75/Box4Droid)
+
+[Box86 by ptitseb](https://github.com/ptitSeb/box86) MIT license
+
+[Proot under Termux](https://github.com/termux/proot) GPL-2.0 license
+
+[Anlinux Ubuntu Rootfs](https://github.com/EXALAB/Anlinux-Resources/tree/master/Rootfs/Ubuntu/arm64) GPL-2.0 License
+
+[DXVK](https://github.com/doitsujin/dxvk) Zlib license
+
+[Termux-app](https://github.com/termux/termux-app) GPLv3 license
+
+[Termux-x11](https://github.com/termux/termux-x11)
+
+[Wine](https://wiki.winehq.org/Licensing)
