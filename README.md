@@ -21,6 +21,14 @@ Open termux and paste command `cd && curl -o install https://raw.githubuserconte
 
 [DXVK](https://github.com/doitsujin/dxvk) Zlib license
 
+[DXVK-ASYNC](https://github.com/Sporif/dxvk-async)
+
+[DXVK-GPLASYNC](https://gitlab.com/Ph42oN/dxvk-gplasync)
+
+[VKD3D](https://github.com/lutris/vkd3d)
+
+[D8VK](https://github.com/AlpyneDreams/d8vk)
+
 [Termux-app](https://github.com/termux/termux-app) GPLv3 license
 
 [Termux-x11](https://github.com/termux/termux-x11)
