@@ -47,10 +47,8 @@ rm -rf scripts.tar.gz
 
 cd $HOME/termux-box/
 wget https://github.com/olegos2/termux-box/raw/main/termux-box &>/dev/null
-wget https://github.com/olegos2/termux-box/raw/main/start-ubuntu.sh &>/dev/null
 chmod +x termux-box
 mv termux-box $PREFIX/bin/
-chmod +x start-ubuntu.sh
 
 echo ""
 echo "Done. Type 'termux-box' to start"
