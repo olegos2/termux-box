@@ -20,8 +20,8 @@ command+=" -b /sys"
 command+=" -b ubuntu-fs/root:/dev/shm"
 ## uncomment the following line to have access to the home directory of termux
 ## command+=" -b /data/data/com.termux/files/usr/tmp/.virgl_test:/tmp/.virgl_test"
-## command+=" -b /data/data/com.termux/files/usr/tmp/.X11-unix/:/tmp/.X11-unix/"
-## command+=" -b /data/data/com.termux/files/usr/tmp/.X1-lock:/tmp/.X1-lock"
+command+=" -b /data/data/com.termux/files/usr/tmp/.X11-unix/:/tmp/.X11-unix/"
+command+=" -b /data/data/com.termux/files/usr/tmp/.X1-lock:/tmp/.X1-lock"
 ## uncomment the following line to mount /sdcard directly to / 
 command+=" -b /sdcard"
 command+=" -w /root"
