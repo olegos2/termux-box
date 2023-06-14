@@ -2,6 +2,5 @@
 
 termux-x11 :1 &>/dev/null & pulseaudio --start --load="module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1" --exit-idle-time=-1
 cd $HOME/termux-box/
-unset LD_PRELOAD
-proot --link2symlink -0 -r ubuntu-fs -b /dev -b /proc -b /sys -b ubuntu-fs/root:/dev/shm -b /sdcard -w /root /usr/bin/env -i HOME=/root PATH=/usr/local/sbin:/usr/local/bin:/bin:/usr/bin:/sbin:/usr/sbin:/usr/games:/usr/local/games TERM=$TERM LANG=C.UTF-8 /bin/bash --login
+./start-proot.sh
 pkill -f "app_process / com.termux.x11"
