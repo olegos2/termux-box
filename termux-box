@@ -2,5 +2,5 @@
 
 termux-x11 :1 &>/dev/null & pulseaudio --start --load="module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1" --exit-idle-time=-1
 cd $HOME/termux-box/
-./start-ubuntu.sh
+./start-proot.sh
 pkill -f "app_process / com.termux.x11"
