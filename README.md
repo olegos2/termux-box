@@ -11,6 +11,16 @@ Open termux and paste command
 
 `cd && curl -o install https://raw.githubusercontent.com/olegos2/termux-box/main/install && chmod +x install && ./install`
 
+### Additional software for some games
+
+[Wine Gecko x86](https://github.com/olegos2/termux-box/releases/download/0.0.1-alpha/wine-gecko-2.47.3-x86.msi)
+
+[Wine Gecko](https://github.com/olegos2/termux-box/releases/download/0.0.1-alpha/wine-gecko-2.47.3-x86_64.msi)
+
+[Wine Mono](https://github.com/olegos2/termux-box/releases/download/0.0.1-alpha/wine-mono-8.0.0-x86.msi)
+
+[DirectX](https://github.com/olegos2/termux-box/releases/download/0.0.1-alpha/DirectX2010.7z)
+(To install run install.bat)
 #
 Big thanks to Hugo for help
 
@@ -18,9 +28,11 @@ Big thanks to Hugo for help
 
 [Box4Droid](https://github.com/Herick75/Box4Droid)
 
-[Box86 by ptitseb](https://github.com/ptitSeb/box86) MIT license
+[Box64](https://github.com/ptitSeb/box64) MIT license
 
-[Proot under Termux](https://github.com/termux/proot) GPL-2.0 license
+[Box86](https://github.com/ptitSeb/box86) MIT license
+
+[Proot](https://github.com/termux/proot) GPL-2.0 license
 
 [Anlinux Ubuntu Rootfs](https://github.com/EXALAB/Anlinux-Resources/tree/master/Rootfs/Ubuntu/arm64) GPL-2.0 License
 
