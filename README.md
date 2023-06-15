@@ -17,8 +17,6 @@ Open termux and paste command
 
 [Wine Gecko](https://github.com/olegos2/termux-box/releases/download/0.0.1-alpha/wine-gecko-2.47.3-x86_64.msi)
 
-[Wine Mono](https://github.com/olegos2/termux-box/releases/download/0.0.1-alpha/wine-mono-8.0.0-x86.msi)
-
 [DirectX](https://github.com/olegos2/termux-box/releases/download/0.0.1-alpha/DirectX2010.7z)
 (To install run install.bat)
 #
