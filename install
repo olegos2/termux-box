@@ -23,6 +23,8 @@ pkg install pulseaudio -y &>/dev/null
 pkg install xwayland -y &>/dev/null
 pkg install proot -y &>/dev/null
 pkg install wget -y &>/dev/null
+pkg install tsu -y &>/dev/null
+pkg install root-repo -y &>/dev/null
 rm -rf $HOME/termux-box
 mkdir -p $HOME/termux-box
 cd $HOME/termux-box
