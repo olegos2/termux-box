@@ -2,5 +2,17 @@
 
 termux-x11 :1 &>/dev/null & pulseaudio --start --load="module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1" --exit-idle-time=-1
 cd $HOME/termux-box/
+echo ""
+echo "1) Proot"
+echo "2) Chroot (root only)"
+read oleg
+case $oleg in
+1)
 ./start-proot.sh
+;;
+2)
+sudo ./start-chroot.sh
+;;
+esac
+
 pkill -f "app_process / com.termux.x11"
