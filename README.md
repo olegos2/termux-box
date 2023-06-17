@@ -15,6 +15,9 @@ Open termux and paste command
 
 [DirectX](https://github.com/olegos2/termux-box/releases/download/0.0.1-alpha/DirectX2010.7z)
 (To install run install.bat)
+
+[Wine Mono](https://github.com/olegos2/termux-box/releases/download/0.0.1-alpha/WineMono.7z)
+
 #
 Big thanks to Hugo for help
 
