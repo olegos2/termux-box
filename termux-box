@@ -8,9 +8,12 @@ echo "2) Chroot (root only)"
 read oleg
 case $oleg in
 1)
+negus=`whoami`
+sudo chown -hR $negus ubuntu-fs/opt/.wine $>/dev/null
 ./start-proot.sh
 ;;
 2)
+sudo chown -hR root ubuntu-fs/opt/.wine $>/dev/null
 sudo ./start-chroot.sh
 ;;
 esac
