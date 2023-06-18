@@ -13,7 +13,7 @@ sudo chown -hR $negus ubuntu-fs/opt/.wine $>/dev/null
 ./start-proot.sh
 ;;
 2)
-sudo chown -hR root ubuntu-fs/opt/.wine $>/dev/null
+sudo chown -hR root ubuntu-fs/opt $>/dev/null
 sudo ./start-chroot.sh
 ;;
 esac
