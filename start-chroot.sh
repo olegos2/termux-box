@@ -14,7 +14,6 @@ else
 mkdir $folder/sdcard
 fi
 
-echo -e "\033[0;93m Mounting partitions ..."
 sudo mount --bind /dev $folder/dev
 sudo mount --bind /sys $folder/sys
 sudo mount --bind /proc $folder/proc
