@@ -8,9 +8,7 @@ export LANGUAGE=C
 export LANG=C
 folder=/data/data/com.termux/files/home/termux-box/ubuntu-fs
 
-if [ -e $folder/sdcard ]; then
-echo ""
-else
+if [ ! -e $folder/sdcard ]; then
 mkdir $folder/sdcard
 fi
 
