@@ -14,6 +14,7 @@ Open termux and paste command
 ### Additional software for some games
 
 [Wine Mono](https://github.com/olegos2/termux-box/releases/download/0.0.1-alpha/WineMono.7z)
+[DirectX](https://github.com/olegos2/termux-box/releases/download/0.0.1-alpha/DirectX2010.7z)
 
 #
 Big thanks to Hugo for help
