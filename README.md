@@ -1,6 +1,6 @@
 ## About
 
-Termux-box is a script to install preconfigured rootfs with [Box86](https://github.com/ptitSeb/box86), [Box64](https://github.com/ptitSeb/box64), [Wine](https://www.winehq.org/) and [DXVK](https://github.com/doitsujin/dxvk) installed. Currently no virgl mode in scripts.
+Termux-box is a script to install preconfigured rootfs with [Box86](https://github.com/ptitSeb/box86), [Box64](https://github.com/ptitSeb/box64), [Wine](https://www.winehq.org/) and [DXVK](https://github.com/doitsujin/dxvk) installed.
 
 ## Installation
 Download and install
@@ -18,7 +18,8 @@ Open termux and paste command
 [DirectX](https://github.com/olegos2/termux-box/releases/download/0.0.1-alpha/DirectX2010.7z)
 
 #
-Big thanks to Hugo for help
+Big thanks to Hugo for help.
+[MishkaKolos Discord](https://discord.gg/ZAQnZzbCXq)
 
 ## Third party applications
 
