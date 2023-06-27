@@ -15,6 +15,7 @@ done
 mkdir -p storage/shared/termux-box
 pkg clean
 pkg update -y
+pkg upgrade -y
 sleep 2
 echo ""
 echo "Installing packages"
