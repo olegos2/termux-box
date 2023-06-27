@@ -48,4 +48,6 @@ Big thanks to Hugo for help.
 
 [Wine](https://wiki.winehq.org/Licensing)
 
+[Mesa](https://docs.mesa3d.org/license.html) MIT license
+
 [mesa-zink-11.06.22](https://github.com/alexvorxx/mesa-zink-11.06.22)
