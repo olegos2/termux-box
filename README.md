@@ -47,3 +47,5 @@ Big thanks to Hugo for help.
 [Termux-x11](https://github.com/termux/termux-x11)
 
 [Wine](https://wiki.winehq.org/Licensing)
+
+[mesa-zink-11.06.22](https://github.com/alexvorxx/mesa-zink-11.06.22)
