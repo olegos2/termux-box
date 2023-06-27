@@ -19,6 +19,7 @@ Open termux and paste command
 
 #
 Big thanks to Hugo for help.
+
 [MishkaKolos Discord](https://discord.gg/ZAQnZzbCXq)
 
 ## Third party applications
