@@ -32,8 +32,6 @@ Big thanks to Hugo for help.
 
 [Proot](https://github.com/termux/proot) GPL-2.0 license
 
-[Anlinux Ubuntu Rootfs](https://github.com/EXALAB/Anlinux-Resources/tree/master/Rootfs/Ubuntu/arm64) GPL-2.0 License
-
 [DXVK](https://github.com/doitsujin/dxvk) Zlib license
 
 [DXVK-ASYNC](https://github.com/Sporif/dxvk-async)
