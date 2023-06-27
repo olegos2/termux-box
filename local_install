@@ -43,16 +43,16 @@ tar -xf rootfs.tar.xz
 rm -rf rootfs.tar.xz
 
 cd $HOME/termux-box/ubuntu-fs/opt
-wget https://github.com/olegos2/termux-box/raw/main/scripts.tar.gz &>/dev/null
+cp $HOME/storage/shared/Download/scripts.tar.gz . &>/dev/null
 tar -xf scripts.tar.gz
 rm -rf scripts.tar.gz
 
 cd $HOME/termux-box/
-wget -N https://github.com/olegos2/termux-box/raw/main/termux-box &>/dev/null
+cp $HOME/storage/shared/Download/termux-box . &>/dev/null
 chmod +x termux-box
 mv termux-box $PREFIX/bin/
-wget -N https://github.com/olegos2/termux-box/raw/main/start-proot.sh &>/dev/null
-wget -N https://github.com/olegos2/termux-box/raw/main/start-chroot.sh &>/dev/null
+cp $HOME/storage/shared/Download/start-proot.sh . &>/dev/null
+cp $HOME/storage/shared/Download/start-chroot.sh . &>/dev/null
 chmod +x start-proot.sh
 chmod +x start-chroot.sh
 
