@@ -1,5 +1,6 @@
 #!/bin/bash
 
+cd
 echo ""
 echo "Сlick on allow to proceed"
 termux-setup-storage & sleep 4 &>/dev/null
