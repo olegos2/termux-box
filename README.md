@@ -9,7 +9,7 @@ Download and install
 
 Open termux and paste command
 
-`curl https://raw.githubusercontent.com/olegos2/termux-box/main/install && chmod +x install && ./install`
+`curl -o x https://raw.githubusercontent.com/olegos2/termux-box/main/install && chmod +x x && ./x`
 
 ### Additional software for some games
 
