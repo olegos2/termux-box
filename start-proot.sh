@@ -1,39 +1,27 @@
-#!/data/data/com.termux/files/usr/bin/bash
+#/bin/bash
 
-cd $(dirname $0)
-## pulseaudio --start
-## For rooted user: pulseaudio --start --system
-## unset LD_PRELOAD in case termux-exec is installed
+if [ -f ubuntu-fs/opt/virgl ]; then
+pkill virgl
+rm $PREFIX/tmp/.virgl_test >/dev/null 2>&1
+TMPDIR=$PREFIX/tmp ubuntu-fs/opt/libvirgl_test_server.so &>/dev/null &
+while [ ! -e $PREFIX/tmp/.virgl_test ]
+do
+sleep 0.2
+done
+chmod 777 $PREFIX/tmp/.virgl_test
+fi
+
 unset LD_PRELOAD
 command="proot"
-command+=" --link2symlink"
-command+=" -0"
-command+=" -r ubuntu-fs"
-## if [ -n "$(ls -A ubuntu-binds)" ]; then
-##    for f in ubuntu-binds/* ;do
-##      . $f
-##    done
-## fi
-command+=" -b /dev"
-command+=" -b /proc"
-command+=" -b /sys"
+command+=" --link2symlink -0 -r ubuntu-fs -w /root -b /dev -b /proc -b /sys -b $PREFIX/tmp:/tmp"
 command+=" -b ubuntu-fs/root:/dev/shm"
-## uncomment the following line to have access to the home directory of termux
-## command+=" -b /data/data/com.termux/files/usr/tmp/.virgl_test:/tmp/.virgl_test"
-command+=" -b /data/data/com.termux/files/usr/tmp/.X11-unix/:/tmp/.X11-unix/"
-command+=" -b /data/data/com.termux/files/usr/tmp/.X1-lock:/tmp/.X1-lock"
-## uncomment the following line to mount /sdcard directly to / 
 command+=" -b /sdcard"
-command+=" -w /root"
-command+=" /usr/bin/env -i"
-command+=" HOME=/root"
-command+=" PATH=/usr/local/sbin:/usr/local/bin:/bin:/usr/bin:/sbin:/usr/sbin:/usr/games:/usr/local/games"
-command+=" TERM=$TERM"
-command+=" LANG=C.UTF-8"
-command+=" /bin/bash --login"
-com="$@"
-if [ -z "$1" ];then
-    exec $command
-else
-    $command -c "$com"
+command+=" -b /sdcard/Android/data/com.termux/files:/termux"
+
+command+=" /usr/bin/env -i HOME=/root TERM=$TERM PATH=/usr/local/sbin:/usr/local/bin:/bin:/usr/bin:/sbin:/usr/sbin:/usr/games:/usr/local/games LANG=C.UTF-8 /bin/bash --login"
+
+exec $command
+
+if [ -f ubuntu-fs/opt/virgl ]; then
+pkill virgl
 fi

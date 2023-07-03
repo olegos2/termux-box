@@ -1,23 +1,47 @@
 #!/bin/bash
 
-termux-x11 :1 &>/dev/null & pulseaudio --start --load="module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1" --exit-idle-time=-1
-cd $HOME/termux-box/
+cd $HOME/termux-box
+
+sudo chown -hR $(whoami) ubuntu-fs/root $>/dev/null
 
 touch ubuntu-fs/root/.hushlogin
 
+mkdir -p /sdcard/Android/data/com.termux/files/Download &>/dev/null
+
+termux-x11 :1 &>/dev/null & pulseaudio --start --load="module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1" --exit-idle-time=-1
+
+mkdir /sdcard/termux-box >/dev/null 2>&1
+cp -n ubuntu-fs/opt/Env.conf /sdcard/termux-box >/dev/null 2>&1
+cp -n ubuntu-fs/opt/dxvk.conf /sdcard/termux-box >/dev/null 2>&1
+negus=$(cat ubuntu-fs/opt/script.conf)
+if [ "$negus" = "" ]; then
 echo ""
 echo "1) Proot"
 echo "2) Chroot (root only)"
 read oleg
+elif [ "$negus" = "proot" ]; then
+oleg=1
+else
+oleg=2
+fi
 case $oleg in
 1)
-negus=`whoami`
-sudo chown -hR $negus ubuntu-fs/opt/.wine $>/dev/null
-./start-proot.sh
+echo "proot">ubuntu-fs/opt/script.conf
+if [[ "$(sudo a)" = *"Are you rooted?"* ]]; then
+ ./start-proot.sh
+else
+ echo "Warning! Using proot with root is unstable!"
+ sleep 3
+ sudo chown -hR root ubuntu-fs/root $>/dev/null
+ sudo ./start-proot.sh
+ sudo chown -hR $(whoami) ubuntu-fs/root $>/dev/null
+fi
 ;;
 2)
-sudo chown -hR root ubuntu-fs/opt/.wine $>/dev/null
+echo "chroot">ubuntu-fs/opt/script.conf
+sudo chown -hR root ubuntu-fs/root $>/dev/null
 sudo ./start-chroot.sh
+sudo chown -hR $(whoami) ubuntu-fs/root $>/dev/null
 ;;
 esac
 
