@@ -61,4 +61,4 @@ chmod +x start-chroot.sh
 echo ""
 echo "Done. Type 'termux-box' to start"
 
-rm -rf $HOME/install
+rm -rf $HOME/x
