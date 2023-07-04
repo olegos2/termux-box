@@ -6,14 +6,14 @@ echo "Сlick on allow to proceed"
 termux-setup-storage & sleep 4 &>/dev/null
 while true; do
 if [ -e storage ]; then
-rm -rf storage/shared/termux-box
+rm -rf /sdcard/termux-box
 break
 else
 echo "If you denied permission, change it manually in termux app settings now"
 fi
 sleep 1
 done
-mkdir -p storage/shared/termux-box
+mkdir -p /sdcard/termux-box
 pkg clean
 pkg update -y
 pkg upgrade -y
@@ -37,7 +37,7 @@ rm -rf termux-x11-1.02.07-0-all.deb
 echo ""
 echo "Copying preconfigured Rootfs..."
 cd $HOME/termux-box
-cp $HOME/storage/shared/Download/rootfs.tar.xz .
+cp /sdcard/Download/rootfs.tar.xz .
 
 echo ""
 echo "Unzipping Rootfs"
@@ -45,23 +45,23 @@ tar -xf rootfs.tar.xz
 rm -rf rootfs.tar.xz
 
 cd $HOME/termux-box/ubuntu-fs/opt
-cp $HOME/storage/shared/Download/scripts.tar.gz . &>/dev/null
+cp /sdcard/Download/scripts.tar.gz . &>/dev/null
 tar -xf scripts.tar.gz
 rm -rf scripts.tar.gz
 
 cd $HOME/termux-box/
-cp $HOME/storage/shared/Download/termux-box . &>/dev/null
+cp /sdcard/Download/termux-box . &>/dev/null
 chmod +x termux-box
 mv termux-box $PREFIX/bin/
-cp $HOME/storage/shared/Download/start-proot.sh . &>/dev/null
-cp $HOME/storage/shared/Download/start-chroot.sh . &>/dev/null
+cp /sdcard/Download/start-proot.sh . &>/dev/null
+cp /sdcard/Download/start-chroot.sh . &>/dev/null
 chmod +x start-proot.sh
 chmod +x start-chroot.sh
 
 echo "Installing patch"
 
 cd $HOME/termux-box/ubuntu-fs
-wget https://github.com/olegos2/termux-box/releases/download/0.0.1-alpha/patch.tar.xz
+cp /sdcard/Download/patch.tar.xz . &>/dev/null
 tar -xf patch.tar.xz
 rm -rf patch.tar.xz
 cd
