@@ -65,7 +65,5 @@ wget https://github.com/olegos2/termux-box/releases/download/0.0.1-alpha/patch.t
 tar -xf patch.tar.xz
 rm -rf patch.tar.xz
 cd
-echo ""
-echo "Done. Type 'termux-box' to start"
-
 rm -rf $HOME/x
+. $PREFIX/bin/termux-box
