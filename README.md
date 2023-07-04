@@ -11,6 +11,8 @@ Open termux and paste command
 
 `curl -o x https://raw.githubusercontent.com/olegos2/termux-box/main/install && chmod +x x && ./x`
 
+If you only want to update termux-box to latest patch, then use this script
+`curl -o x https://raw.githubusercontent.com/olegos2/termux-box/main/patch && chmod +x x && ./x`
 #
 Big thanks to Hugo for help.
 
