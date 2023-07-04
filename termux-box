@@ -28,7 +28,13 @@ case $oleg in
 1)
 echo "proot">ubuntu-fs/opt/script.conf
 if [[ "$(sudo a)" = *"Are you rooted?"* ]]; then
+ running=true
+ while $running; do
+ sleep 1
+ am start --user 0 -n i.donothing/.MainActivity &>/dev/null
+ done &
  ./start-proot.sh
+ running=false
 else
  echo "Warning! Using proot with root is unstable!"
  sleep 3
