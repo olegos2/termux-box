@@ -3,6 +3,8 @@
 Termux-box is a script to install preconfigured rootfs with [Box86](https://github.com/ptitSeb/box86), [Box64](https://github.com/ptitSeb/box64), [Wine](https://www.winehq.org/) and [DXVK](https://github.com/doitsujin/dxvk) installed.
 
 ## Installation
+After installation the start command in termux is "termux-box"
+
 Download and install
 [Termux](https://f-droid.org/en/packages/com.termux),
 [Termux-X11](https://raw.githubusercontent.com/olegos2/termux-box/main/termux-x11-arm64-v8a-debug.apk)
