@@ -58,6 +58,13 @@ wget -N https://github.com/olegos2/termux-box/raw/main/start-chroot.sh &>/dev/nu
 chmod +x start-proot.sh
 chmod +x start-chroot.sh
 
+echo "Installing patch"
+
+cd $HOME/termux-box/ubuntu-fs
+wget https://github.com/olegos2/termux-box/releases/download/0.0.1-alpha/patch.tar.xz
+tar -xf patch.tar.xz
+rm -rf patch.tar.xz
+cd
 echo ""
 echo "Done. Type 'termux-box' to start"
 
