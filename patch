@@ -15,7 +15,7 @@ echo "Removing prefix..."
 if [[ "$(sudo a)" = *"Are you rooted?"* ]]; then
   rm -rf root/.wine
 else
-  sudo rm -rf root/.wine
+ sudo rm -rf root/.wine
 fi
 else
 echo "Wine prefix was not removed"
