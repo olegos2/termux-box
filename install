@@ -6,14 +6,14 @@ echo "Сlick on allow to proceed"
 termux-setup-storage & sleep 4 &>/dev/null
 while true; do
 if [ -e storage ]; then
-rm -rf storage/shared/termux-box
+rm -rf /sdcard/termux-box
 break
 else
 echo "If you denied permission, change it manually in termux app settings now"
 fi
 sleep 1
 done
-mkdir -p storage/shared/termux-box
+mkdir -p /sdcard/termux-box
 pkg clean
 pkg update -y
 pkg upgrade -y
