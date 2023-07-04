@@ -12,7 +12,11 @@ echo "Delete container? (Y/n)"
 read select
 if [ "$select" = "Y" ] || [ "$select" = "y" ]; then
 echo "Removing prefix..."
-rm -rf root/.wine
+if [[ "$(sudo a)" = *"Are you rooted?"* ]]; then
+  rm -rf root/.wine
+else
+ sudo rm -rf root/.wine
+fi
 else
 echo "Wine prefix was not removed"
 fi
