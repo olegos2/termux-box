@@ -6,18 +6,4 @@ wget https://github.com/olegos2/termux-box/releases/download/0.0.1-alpha/patch.t
 tar -xf patch.tar.xz
 rm -rf patch.tar.xz
 
-echo "The current wine prefix has to be removed after installing patch"
-echo "If you select no, you should delete it manually in termux-box menu"
-echo "Delete container? (Y/n)"
-read select
-if [ "$select" = "Y" ] || [ "$select" = "y" ]; then
-echo "Removing prefix..."
-if [[ "$(sudo a)" = *"Are you rooted?"* ]]; then
-  rm -rf root/.wine
-else
- sudo rm -rf root/.wine
-fi
-else
-echo "Wine prefix was not removed"
-fi
-cd
+echo "After installing patch you should select \"update prefix after patch\" option in termux-box menu."
