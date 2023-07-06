@@ -14,6 +14,7 @@ seconds=$((current - timestamp))
 minutes=$(((seconds / 60) % 60))
 hours=$(((seconds / 3600) % 24))
 days=$((seconds / 86400))
+echo ""
 echo -n "Installed patch released "
 if [ $days = 1 ]; then echo -n "$days day, "
 else echo -n "$days days, "; fi
