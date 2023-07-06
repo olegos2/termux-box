@@ -1,5 +1,44 @@
 #!/bin/bash
 
+if [ ! -e termux-box/update-timestamp ]; then
+curl -o termux-box/update-timestamp https://raw.githubusercontent.com/olegos2/termux-box/main/update-timestamp &>/dev/null
+fi
+current=$(date '+%s')
+timestamp=$(cat termux-box/update-timestamp)
+seconds=$((current - timestamp))
+minutes=$((seconds / 60))
+hours=$((minutes / 60))
+days=$((hours / 24))
+hours=$((hours % 24))
+minutes=$((minutes % 60))
+echo -n "Installed patch released "
+if (( days = 1 )); then echo -n "$days day, "
+else echo -n "$days days, "; fi
+if (( hours = 1 )); then echo -n "$hours hour, "
+else echo -n "$hours hours, "; fi
+if (( minutes = 1 )); then echo "$minutes minute ago"
+else echo "$minutes minutes ago"; fi
+
+sleep 0.5
+
+latest=$(curl termux-box/update-timestamp https://raw.githubusercontent.com/olegos2/termux-box/main/update-timestamp)
+if [ "$timestamp" = "$latest" ]; then
+echo "termux-box is up to date!"
+else
+echo "A new patch is available! Do you want to install it? (Y/n)"
+read sel
+if [ "$sel" = "Y" ] || [ "$sel" = "y" ]; then
+curl -o x https://raw.githubusercontent.com/olegos2/termux-box/main/patch &>/dev/null
+chmod +x x
+./x
+echo "$latest">termux-box/update-timestamp
+exec $PREFIX/bin/termux-box
+else
+echo "Update was not installed"
+fi
+
+sleep 0.5
+
 cd $HOME/termux-box
 
 sudo chown -hR $(whoami) ubuntu-fs/root $>/dev/null
