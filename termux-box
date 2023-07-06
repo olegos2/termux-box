@@ -21,7 +21,7 @@ else echo "$minutes minutes ago"; fi
 
 sleep 0.5
 
-latest=$(curl termux-box/update-timestamp https://raw.githubusercontent.com/olegos2/termux-box/main/update-timestamp)
+latest=$(curl termux-box/update-timestamp https://raw.githubusercontent.com/olegos2/termux-box/main/update-timestamp) $>/dev/null
 if [ "$timestamp" = "$latest" ]; then
 echo "termux-box is up to date!"
 else
@@ -36,17 +36,15 @@ exec $PREFIX/bin/termux-box
 else
 echo "Update was not installed"
 fi
+fi
 
 sleep 0.5
 
 cd $HOME/termux-box
 
 sudo chown -hR $(whoami) ubuntu-fs/root $>/dev/null
-
 touch ubuntu-fs/root/.hushlogin
-
 mkdir -p /sdcard/Android/data/com.termux/files/Download &>/dev/null
-
 termux-x11 :1 &>/dev/null & pulseaudio --start --load="module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1" --exit-idle-time=-1
 
 mkdir /sdcard/termux-box >/dev/null 2>&1
