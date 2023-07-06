@@ -1,7 +1,12 @@
 #!/bin/bash
 
 if [ ! -e termux-box/update-timestamp ]; then
-curl -s -o termux-box/update-timestamp https://raw.githubusercontent.com/olegos2/termux-box/main/update-timestamp
+latestupdate=$(curl -s https://raw.githubusercontent.com/olegos2/termux-box/main/update-timestamp)
+if [[ "$latestupdate" = *"Could not resolve"* ]]; then
+echo "No internet connetion, try again"
+return
+fi
+echo "$latestupdate">termux-box/update-timestamp
 fi
 current=$(date '+%s')
 timestamp=$(cat termux-box/update-timestamp)
@@ -20,6 +25,9 @@ else echo "$minutes minutes ago"; fi
 sleep 0.5
 
 latestupdate=$(curl -s https://raw.githubusercontent.com/olegos2/termux-box/main/update-timestamp)
+if [[ "$latestupdate" = *"Could not resolve"* ]]; then
+echo "Could not check for updates"
+else
 if [ "$timestamp" = "$latestupdate" ]; then
 echo "termux-box is up to date!"
 else
@@ -33,6 +41,7 @@ echo "$latestupdate">termux-box/update-timestamp
 exec $PREFIX/bin/termux-box
 else
 echo "Update was not installed"
+fi
 fi
 fi
 
