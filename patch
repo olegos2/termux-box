@@ -11,7 +11,7 @@ chmod +x start-chroot.sh
 
 cd $HOME/termux-box/ubuntu-fs
 
-wget https://github.com/olegos2/termux-box/releases/download/0.0.1-alpha/patch.tar.xz
+wget https://github.com/olegos2/termux-box/releases/download/0.0.1-alpha/patch.tar.xz &>/dev/null
 tar -xf patch.tar.xz
 rm -rf patch.tar.xz
 
