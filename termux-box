@@ -10,17 +10,17 @@ minutes=$(((seconds / 60) % 60))
 hours=$(((seconds / 3600) % 24))
 days=$((seconds / 86400))
 echo -n "Installed patch released "
-if (( days = 1 )); then echo -n "$days day, "
+if [ days = 1 ]; then echo -n "$days day, "
 else echo -n "$days days, "; fi
-if (( hours = 1 )); then echo -n "$hours hour, "
+if [ hours = 1 ]; then echo -n "$hours hour, "
 else echo -n "$hours hours, "; fi
-if (( minutes = 1 )); then echo "$minutes minute ago"
+if [ minutes = 1 ]; then echo "$minutes minute ago"
 else echo "$minutes minutes ago"; fi
 
 sleep 0.5
 
 latest=$(curl https://raw.githubusercontent.com/olegos2/termux-box/main/update-timestamp) $>/dev/null
-if [ "$timestamp" = "$latest" ]; then
+if [ $timestamp = $latest ]; then
 echo "termux-box is up to date!"
 else
 echo -n "A new patch is available! Do you want to install it? (Y/n) "
