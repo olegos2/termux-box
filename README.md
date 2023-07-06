@@ -23,7 +23,7 @@ Big thanks to Hugo for help.
 * TFM works a lot faster with custom wine.
 * The most lightweight rootfs.
 * Proot which is faster than proot-distro.
-* Chroot for root users
+* Chroot with working VirGL for root users
 * VirGL server with dxtn support (termux virgl doesn't have this). Mesa-VirGL 18.3.0, 19.1.8, 22.1.7.
 * Turnip with adreno 610 and 7xx support.
 * Zink-11.06 built from alexvorxx repo which is faster and has better compatibility.
