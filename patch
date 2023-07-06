@@ -18,5 +18,5 @@ tar -xf patch.tar.xz
 rm -rf patch.tar.xz
 
 cd
-
+echo ""
 echo "After installing patch you should select \"update prefix after patch\" option in termux-box menu."
