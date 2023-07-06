@@ -6,11 +6,9 @@ fi
 current=$(date '+%s')
 timestamp=$(cat termux-box/update-timestamp)
 seconds=$((current - timestamp))
-minutes=$((seconds / 60))
-hours=$((minutes / 60))
-days=$((hours / 24))
-hours=$((hours % 24))
-minutes=$((minutes % 60))
+minutes=$(((seconds / 60) % 60))
+hours=$(((seconds / 3600) % 24))
+days=$((seconds / 86400))
 echo -n "Installed patch released "
 if (( days = 1 )); then echo -n "$days day, "
 else echo -n "$days days, "; fi
@@ -25,8 +23,9 @@ latest=$(curl termux-box/update-timestamp https://raw.githubusercontent.com/oleg
 if [ "$timestamp" = "$latest" ]; then
 echo "termux-box is up to date!"
 else
-echo "A new patch is available! Do you want to install it? (Y/n)"
+echo -n "A new patch is available! Do you want to install it? (Y/n) "
 read sel
+echo ""
 if [ "$sel" = "Y" ] || [ "$sel" = "y" ]; then
 curl -o x https://raw.githubusercontent.com/olegos2/termux-box/main/patch &>/dev/null
 chmod +x x
