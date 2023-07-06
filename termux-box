@@ -1,7 +1,7 @@
 #!/bin/bash
 
 if [ ! -e termux-box/update-timestamp ]; then
-curl -o termux-box/update-timestamp https://raw.githubusercontent.com/olegos2/termux-box/main/update-timestamp >/dev/null 2>&1
+curl -s -o termux-box/update-timestamp https://raw.githubusercontent.com/olegos2/termux-box/main/update-timestamp
 fi
 current=$(date '+%s')
 timestamp=$(cat termux-box/update-timestamp)
@@ -19,15 +19,15 @@ else echo "$minutes minutes ago"; fi
 
 sleep 0.5
 
-latestupdate=$(curl https://raw.githubusercontent.com/olegos2/termux-box/main/update-timestamp)
-if [ $timestamp = $latestupdate ]; then
+latestupdate=$(curl -s https://raw.githubusercontent.com/olegos2/termux-box/main/update-timestamp)
+if [ "$timestamp" = "$latestupdate" ]; then
 echo "termux-box is up to date!"
 else
 echo -n "A new patch is available! Do you want to install it? (Y/n) "
 read sel
 echo ""
 if [ "$sel" = "Y" ] || [ "$sel" = "y" ]; then
-curl -o x https://raw.githubusercontent.com/olegos2/termux-box/main/patch &>/dev/null
+curl -s -o x https://raw.githubusercontent.com/olegos2/termux-box/main/patch
 chmod +x x
 ./x
 echo "$latestupdate">termux-box/update-timestamp
