@@ -1,5 +1,7 @@
 #!/bin/bash
 
+rm -rf x
+
 cd $HOME/termux-box/
 wget -N https://github.com/olegos2/termux-box/raw/main/termux-box &>/dev/null
 chmod +x termux-box
