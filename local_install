@@ -68,4 +68,4 @@ cd
 echo ""
 echo "Done. Type 'termux-box' to start"
 
-rm -rf $HOME/x
+rm -rf "$0"
