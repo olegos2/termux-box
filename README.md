@@ -28,7 +28,7 @@ Big thanks to Hugo for help.
 * Turnip with adreno 610 and 7xx support.
 * Zink-11.06 built from alexvorxx repo which is faster and has better compatibility.
 * D8VK+DXVK+VKD3D and WineD3D.
-* Prefix-tweaks script that automatically installs DirectX, various registry fixes, better taskmgr and notepad. Custom theme, better fonts which give a lot better look compared to default wine prefix. Better icons.
+* Prefix-tweaks script that automatically installs DirectX, 7-Zip, various registry fixes, better taskmgr and notepad. Custom theme, better fonts which give a lot better look compared to default wine prefix. Better icons.
 
 ## Third party applications
 
