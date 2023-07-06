@@ -19,7 +19,7 @@ else echo "$minutes minutes ago"; fi
 
 sleep 0.5
 
-latest=$(curl termux-box/update-timestamp https://raw.githubusercontent.com/olegos2/termux-box/main/update-timestamp) $>/dev/null
+latest=$(curl https://raw.githubusercontent.com/olegos2/termux-box/main/update-timestamp) $>/dev/null
 if [ "$timestamp" = "$latest" ]; then
 echo "termux-box is up to date!"
 else
