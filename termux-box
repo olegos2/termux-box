@@ -25,7 +25,6 @@ echo "termux-box is up to date!"
 else
 echo -n "A new patch is available! Do you want to install it? (Y/n) "
 read sel
-echo ""
 if [ "$sel" = "Y" ] || [ "$sel" = "y" ]; then
 curl -s -o y https://raw.githubusercontent.com/olegos2/termux-box/main/patch
 chmod +x y
