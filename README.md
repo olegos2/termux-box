@@ -20,11 +20,11 @@ Big thanks to Hugo for help.
 
 ## Requirements
 ### Android
-* Android 10 for chroot.
-* Android 11, 12, 13 for both chroot and proot.
+* Android 10 - chroot.
+* Android 11, 12, 13 - chroot and proot.
 ### SoC
-* Turnip+Zink (with DXVK) only works on Snapdragon SoCs with adreno 6xx or 7xx.
-* VirGL works on adreno and mali, mostly without problems in directx 9 games.
+* Turnip+Zink (with DXVK) - Snapdragon SoCs with Adreno 6xx or Adreno 7xx.
+* VirGL - most of the devices without problems with DirectX 9.
 
 ## Features
 * Termux-box has automatic updates, so you don't have to reinstall it so often.
