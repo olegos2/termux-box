@@ -37,7 +37,7 @@ rm -rf termux-x11-1.02.07-0-all.deb
 echo ""
 echo "Downloading preconfigured Rootfs..."
 cd $HOME/termux-box
-wget https://github.com/olegos2/termux-box/releases/download/0.0.1-alpha/rootfs.tar.xz
+wget -q -show-progress https://github.com/olegos2/termux-box/releases/download/0.0.1-alpha/rootfs.tar.xz
 
 echo ""
 echo "Unzipping Rootfs"
@@ -61,7 +61,7 @@ chmod +x start-chroot.sh
 echo "Installing patch"
 
 cd $HOME/termux-box/ubuntu-fs
-wget https://github.com/olegos2/termux-box/releases/download/0.0.1-alpha/patch.tar.xz
+wget -q -show-progress https://github.com/olegos2/termux-box/releases/download/0.0.1-alpha/patch.tar.xz
 tar -xf patch.tar.xz
 rm -rf patch.tar.xz
 cd
