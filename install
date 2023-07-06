@@ -65,5 +65,5 @@ wget -q --show-progress https://github.com/olegos2/termux-box/releases/download/
 tar -xf patch.tar.xz
 rm -rf patch.tar.xz
 cd
-rm -rf $HOME/x
+rm -rf "$0"
 . $PREFIX/bin/termux-box
