@@ -24,7 +24,7 @@ Big thanks to Hugo for help.
 * Android 11, 12, 13 for both chroot and proot.
 ### SoC
 * Turnip+Zink (with DXVK) only works on Snapdragon SoCs with adreno 6xx or 7xx.
-* VirGL works for adreno and mali, mostly without problems in directx 9 games.
+* VirGL works on adreno and mali, mostly without problems in directx 9 games.
 
 ## Features
 * Termux-box has automatic updates, so you don't have to reinstall it so often.
