@@ -9,14 +9,10 @@ Download and install
 [Termux](https://f-droid.org/en/packages/com.termux),
 [Termux-X11](https://raw.githubusercontent.com/olegos2/termux-box/main/termux-x11-arm64-v8a-debug.apk)
 
-Open termux and paste command to install termux-box 04.07.23
+Open termux and paste command to install latest termux-box
 
 `curl -s -o x https://raw.githubusercontent.com/olegos2/termux-box/main/install && chmod +x x && ./x`
 
-
-If you only want to update termux-box to latest patch since 04.07.23 release, then use this script
-
-`curl -s -o y https://raw.githubusercontent.com/olegos2/termux-box/main/patch && chmod +x y && ./y`
 #
 Big thanks to Hugo for help.
 
