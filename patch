@@ -1,5 +1,10 @@
 #!/bin/bash
 
+cd $HOME/termux-box/ubuntu-fs/opt
+wget https://github.com/olegos2/termux-box/raw/main/scripts.tar.gz &>/dev/null
+tar -xf scripts.tar.gz
+rm -rf scripts.tar.gz
+
 cd $HOME/termux-box/
 wget -N https://github.com/olegos2/termux-box/raw/main/termux-box &>/dev/null
 chmod +x termux-box
