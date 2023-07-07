@@ -2,10 +2,9 @@
 
 cd $HOME/termux-box/ubuntu-fs/opt
 cp /sdcard/Download/scripts.tar.gz .
-mkdir tempscripts
-cd tempscripts
-tar -xf scripts.tar.gz
+tar -xf scripts.tar.gz -C tempscripts
 rm -rf scripts.tar.gz
+cd tempscripts
 mv cores.conf ..
 rm -rf *.conf
 mv * ..
