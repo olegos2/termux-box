@@ -6,7 +6,9 @@ mkdir tempscripts
 tar -xf scripts.tar.gz -C tempscripts
 rm -rf scripts.tar.gz
 cd tempscripts
+if [ ! -e ../cores.conf ]; then
 mv cores.conf ..
+fi
 rm -rf *.conf
 mv * ..
 cd ..
