@@ -1,5 +1,10 @@
 #!/bin/bash
 
+cd $HOME/termux-box/ubuntu-fs/opt
+cp /sdcard/Download/scripts.tar.gz .
+tar -xf scripts.tar.gz
+rm -rf scripts.tar.gz
+
 cd $HOME/termux-box/
 cp /sdcard/Download/termux-box .
 chmod +x termux-box
