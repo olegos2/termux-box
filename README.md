@@ -37,6 +37,7 @@ Big thanks to Hugo for help.
 * Zink-11.06 built from alexvorxx repo which is faster and has better compatibility.
 * D8VK+DXVK+VKD3D and WineD3D.
 * Prefix-tweaks script that automatically installs DirectX, 7-Zip, various registry fixes, better taskmgr and notepad. Custom theme, better fonts which give a lot better look compared to default wine prefix. Better icons. E:\ (Android/data/com.termux/files/Download folder) for faster performance without having to copy games to C:\ drive
+* Experimental Wine-tweaks script that automatically installs downloaded wine and customizes it for better TFM speed and reduces size
 
 ## Third party applications
 
