@@ -2,6 +2,7 @@
 
 cd $HOME/termux-box/ubuntu-fs/opt
 wget https://github.com/olegos2/termux-box/raw/main/scripts.tar.gz &>/dev/null
+mkdir tempscripts
 tar -xf scripts.tar.gz -C tempscripts
 rm -rf scripts.tar.gz
 cd tempscripts
