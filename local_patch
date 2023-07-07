@@ -1,0 +1,22 @@
+#!/bin/bash
+
+cd $HOME/termux-box/
+cp /sdcard/Download/termux-box .
+chmod +x termux-box
+mv termux-box $PREFIX/bin/
+cp /sdcard/Download/start-proot.sh .
+cp /sdcard/Download/start-chroot.sh .
+chmod +x start-proot.sh
+chmod +x start-chroot.sh
+
+cd $HOME/termux-box/ubuntu-fs
+
+cp /sdcard/Download/patch.tar.xz .
+tar -xf patch.tar.xz
+rm -rf patch.tar.xz
+
+cd
+echo ""
+echo "After installing patch you should select \"update prefix after patch\" option in termux-box menu."
+
+rm -rf "$0"
