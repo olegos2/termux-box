@@ -22,7 +22,7 @@ Big thanks to Hugo for help.
 ### Android
 * `Chroot` — Android 10+
 * `Proot` — Android 11+
-### Rendering method
+### Render
 * `Turnip + Zink` — Snapdragon with Adreno 6xx or Adreno 7xx.
 * `VirGL` — almost all devices
 
