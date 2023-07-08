@@ -2,7 +2,7 @@
 
 ## About
 
-`termux-box` is a script to install preconfigured rootfs with [Box86](https://github.com/ptitSeb/box86), [Box64](https://github.com/ptitSeb/box64), [Wine](https://www.winehq.org/) and [DXVK](https://github.com/doitsujin/dxvk) installed.
+`Termux-box` is a script to install preconfigured rootfs with [Box86](https://github.com/ptitSeb/box86), [Box64](https://github.com/ptitSeb/box64), [Wine](https://www.winehq.org/) and [DXVK](https://github.com/doitsujin/dxvk) installed.
 
 ## Installation
 After installation the start command in termux is `termux-box`
@@ -29,7 +29,7 @@ Big thanks to Hugo for help.
 * `VirGL` — almost all devices
 
 ## Features
-* `termux-box` has automatic updates, so you don't have to reinstall it so often.
+* `Termux-box` has automatic updates, so you don't have to reinstall it so often.
 * TFM works a lot faster with custom wine.
 * The most lightweight rootfs.
 * `Proot` which is faster than proot-distro.
@@ -38,7 +38,7 @@ Big thanks to Hugo for help.
 * `Turnip` with adreno 610 and 7xx support.
 * `mesa-zink-11.06.22` built from alexvorxx repo which is faster and has better compatibility.
 * `D8VK+DXVK+VKD3D` and `WineD3D`.
-* `prefix-tweaks` script that automatically installs DirectX, 7-Zip, various registry fixes, better taskmgr and notepad. Custom theme, better fonts which give a lot better look compared to default wine prefix. Better icons. E:\ (Android/data/com.termux/files/Download folder) for faster performance without having to copy games to C:\ drive
+* `Prefix-tweaks` script that automatically installs DirectX, 7-Zip, various registry fixes, better taskmgr and notepad. Custom theme, better fonts which give a lot better look compared to default wine prefix. Better icons. E:\ (Android/data/com.termux/files/Download folder) for faster performance without having to copy games to C:\ drive
 * Experimental `wine-tweaks` script that automatically installs downloaded wine, customizes it for better TFM speed and reduces size
 
 ## Third party applications
