@@ -20,13 +20,13 @@ Big thanks to Hugo for help.
 
 [MishkaKolos Discord](https://discord.gg/ZAQnZzbCXq)
 
-## Requirements
+## Device support
 ### Android
-* `Chroot` — Android 10+
-* `Proot` — Android 11+
+* `Android 10+` — for root users
+* `Android 11+` — for non-root users
 ### Render
-* `Turnip + Zink` — Snapdragon with Adreno 6xx or Adreno 7xx.
-* `VirGL` — almost all devices
+* Snapdragon with Adreno 6xx or Adreno 7xx — for Turnip + Zink / Turnip+DXVK with better speed.
+* Qualcomm/Mediatek/Exynos — for VirGL
 
 ## Features
 * `Termux-box` has automatic updates, so you don't have to reinstall it so often.
@@ -35,9 +35,7 @@ Big thanks to Hugo for help.
 * `Proot` which is faster than proot-distro.
 * `Chroot` with working VirGL for root users
 * VirGL server with dxtn support (termux virgl doesn't have this). Mesa-VirGL 18.3.0, 19.1.8, 22.1.7.
-* `Turnip` with adreno 610 and 7xx support.
-* `mesa-zink-11.06.22` built from alexvorxx repo which is faster and has better compatibility.
-* `D8VK+DXVK+VKD3D` and `WineD3D`.
+* `Turnip` with adreno 610 and 7xx support. `Mesa-zink-11.06.22` built from alexvorxx repo which is faster and has better compatibility. `D8VK + DXVK + VKD3D` and `WineD3D`.
 * `Prefix-tweaks` script that automatically installs DirectX, 7-Zip, various registry fixes, better taskmgr and notepad. Custom theme, better fonts which give a lot better look compared to default wine prefix. Better icons. E:\ (Android/data/com.termux/files/Download folder) for faster performance without having to copy games to C:\ drive
 * Experimental `wine-tweaks` script that automatically installs downloaded wine, customizes it for better TFM speed and reduces size
 
