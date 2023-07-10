@@ -1,15 +1,15 @@
 #!/bin/bash
 
-if [ ! -e termux-box/update-timestamp ]; then
+if [ ! -e ~/termux-box/update-timestamp ]; then
 latestupdate=$(curl --connect-timeout 6 -s https://raw.githubusercontent.com/olegos2/termux-box/main/update-timestamp)
 if [[ "$latestupdate" = "" ]]; then
 echo "No internet connetion, try again"
 return
 fi
-echo "$latestupdate">termux-box/update-timestamp
+echo "$latestupdate">~/termux-box/update-timestamp
 fi
 current=$(date '+%s')
-timestamp=$(cat termux-box/update-timestamp)
+timestamp=$(cat ~/termux-box/update-timestamp)
 seconds=$((current - timestamp))
 minutes=$(((seconds / 60) % 60))
 hours=$(((seconds / 3600) % 24))
@@ -35,10 +35,10 @@ else
 echo -n "A new patch is available! Do you want to install it? (Y/n) "
 read sel
 if [ "$sel" = "Y" ] || [ "$sel" = "y" ]; then
-curl -s -o y https://raw.githubusercontent.com/olegos2/termux-box/main/patch
+curl -s -o ~/y https://raw.githubusercontent.com/olegos2/termux-box/main/patch
 chmod +x y
-./y
-echo "$latestupdate">termux-box/update-timestamp
+~/y
+echo "$latestupdate">~/termux-box/update-timestamp
 exec $PREFIX/bin/termux-box
 else
 echo "Update was not installed"
