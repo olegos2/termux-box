@@ -9,6 +9,10 @@ cd tempscripts
 if [ ! -e ../cores.conf ]; then
 mv cores.conf ..
 fi
+if [ ! -e ../fpscounter.conf ]; then
+mv fpscounter.conf ..
+mv fpscounterstate.conf ..
+fi
 rm -rf *.conf
 mv * ..
 cd ..
