@@ -57,13 +57,13 @@ Big thanks to Hugo for help.
 
 [DXVK-GPLASYNC](https://gitlab.com/Ph42oN/dxvk-gplasync)
 
-[VKD3D](https://github.com/lutris/vkd3d)
+[VKD3D](https://github.com/lutris/vkd3d) LGPL-2.1 license
 
-[D8VK](https://github.com/AlpyneDreams/d8vk)
+[D8VK](https://github.com/AlpyneDreams/d8vk) Zlib license
 
 [Termux-app](https://github.com/termux/termux-app) GPLv3 license
 
-[Termux-x11](https://github.com/termux/termux-x11)
+[Termux-x11](https://github.com/termux/termux-x11) GPL-3.0 license
 
 [Wine](https://wiki.winehq.org/Licensing)
 
