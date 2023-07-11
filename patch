@@ -12,6 +12,7 @@ fi
 if [ ! -e ../fpscounter.conf ]; then
 mv fpscounter.conf ..
 fi
+cp Env.conf /sdcard/termux-box
 mv Env.conf ..
 rm -rf *.conf
 mv * ..
