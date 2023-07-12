@@ -36,7 +36,7 @@ echo -n "A new patch is available! Do you want to install it? (Y/n) "
 read sel
 if [ "$sel" = "Y" ] || [ "$sel" = "y" ]; then
 curl -s -o ~/y https://raw.githubusercontent.com/olegos2/termux-box/main/patch
-chmod +x y
+chmod +x ~/y
 ~/y
 echo "$latestupdate">~/termux-box/update-timestamp
 exec $PREFIX/bin/termux-box
