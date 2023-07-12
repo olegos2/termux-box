@@ -24,6 +24,7 @@ Big thanks to Hugo for help.
 
 ## Device support
 ### Android
+* `Android 9+` — basic support, may not work
 * `Android 10+` — for root users
 * `Android 11+` — for non-root users
 ### Render
