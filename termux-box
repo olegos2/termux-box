@@ -1,15 +1,22 @@
 #!/bin/bash
 
-if [ ! -e ~/termux-box/update-timestamp ]; then
-latestupdate=$(curl --connect-timeout 6 -s https://raw.githubusercontent.com/olegos2/termux-box/main/update-timestamp)
-if [[ "$latestupdate" = "" ]]; then
-echo "No internet connetion, try again"
-return
+cd $HOME/termux-box
+
+if [ ! -e ubuntu-fs/opt/wine ]; then
+ wget -q --show-progress https://github.com/Kron4ek/Wine-Builds/releases/download/8.2/wine-8.2-staging-amd64.tar.xz
+ mv wine-8.2-staging-amd64.tar.xz ubuntu-fs/root/wine.tar.xz
 fi
-echo "$latestupdate">~/termux-box/update-timestamp
+
+if [ ! -e update-timestamp ]; then
+ latestupdate=$(curl --connect-timeout 6 -s https://raw.githubusercontent.com/olegos2/termux-box/main/update-timestamp)
+ if [[ "$latestupdate" = "" ]]; then
+  echo "No internet connetion, try again"
+  return
+ fi
+ echo "$latestupdate">update-timestamp
 fi
 current=$(date '+%s')
-timestamp=$(cat ~/termux-box/update-timestamp)
+timestamp=$(cat update-timestamp)
 seconds=$((current - timestamp))
 minutes=$(((seconds / 60) % 60))
 hours=$(((seconds / 3600) % 24))
@@ -27,29 +34,28 @@ sleep 0.5
 
 latestupdate=$(curl --connect-timeout 6 -s https://raw.githubusercontent.com/olegos2/termux-box/main/update-timestamp)
 if [[ "$latestupdate" = "" ]]; then
-echo "Could not check for updates"
+ echo "Could not check for updates"
 else
-if [ "$timestamp" = "$latestupdate" ]; then
-echo "termux-box is up to date!"
-else
-echo -n "A new patch is available! Do you want to install it? (Y/n) "
-read sel
-if [ "$sel" = "Y" ] || [ "$sel" = "y" ]; then
-curl -s -o ~/y https://raw.githubusercontent.com/olegos2/termux-box/main/patch
-chmod +x ~/y
-~/y
-echo "$latestupdate">~/termux-box/update-timestamp
-exec $PREFIX/bin/termux-box
-else
-echo "Update was not installed"
-fi
-fi
+ if [ "$timestamp" = "$latestupdate" ]; then
+  echo "termux-box is up to date!"
+ else
+  echo -n "A new patch is available! Do you want to install it? (Y/n) "
+  read sel
+  if [ "$sel" = "Y" ] || [ "$sel" = "y" ]; then
+   curl -s -o ~/y https://raw.githubusercontent.com/olegos2/termux-box/main/patch
+   chmod +x ~/y
+   ~/y
+   echo "$latestupdate">~/termux-box/update-timestamp
+   exec $PREFIX/bin/termux-box
+  else
+   echo "Update was not installed"
+  fi
+ fi
 fi
 
 sleep 0.5
 
 cd $HOME/termux-box
-
 sudo chown -hR $(whoami) ubuntu-fs/root $>/dev/null
 touch ubuntu-fs/root/.hushlogin
 mkdir -p /sdcard/Android/data/com.termux/files/Download &>/dev/null
@@ -63,14 +69,14 @@ cp -n ubuntu-fs/opt/Env.conf /sdcard/termux-box >/dev/null 2>&1
 cp -n ubuntu-fs/opt/dxvk.conf /sdcard/termux-box >/dev/null 2>&1
 negus=$(cat ubuntu-fs/opt/script.conf)
 if [ "$negus" = "" ]; then
-echo ""
-echo "1) Proot"
-echo "2) Chroot (root only)"
-read oleg
+ echo ""
+ echo "1) Proot"
+ echo "2) Chroot (root only)"
+ read oleg
 elif [ "$negus" = "proot" ]; then
-oleg=1
+ oleg=1
 else
-oleg=2
+ oleg=2
 fi
 case $oleg in
 1)
