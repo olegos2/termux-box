@@ -4,7 +4,7 @@ cd $HOME/termux-box
 
 if [ ! -e ubuntu-fs/opt/wine ]; then
  wget -q --show-progress https://github.com/Kron4ek/Wine-Builds/releases/download/8.2/wine-8.2-staging-amd64.tar.xz
- mv wine-8.2-staging-amd64.tar.xz ubuntu-fs/root/wine.tar.xz
+ mv wine-8.2-staging-amd64.tar.xz ubuntu-fs/opt/wine.tar.xz
 fi
 
 if [ ! -e update-timestamp ]; then
