@@ -100,3 +100,8 @@ sudo chown -hR $(whoami) ubuntu-fs/root $>/dev/null
 esac
 
 pkill -f "app_process / com.termux.x11"
+
+if [ -e ~/termux-box/ubuntu-fs/opt/restart-termux-box ]; then
+ rm -rf ~/termux-box/ubuntu-fs/opt/restart-termux-box
+ exec $0
+fi
