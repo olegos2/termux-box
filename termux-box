@@ -55,10 +55,15 @@ fi
 
 sleep 0.5
 
+if [ ! -L $HOME/termux-box/ubuntu-fs/opt/prefix-tweaks/dosdevices/f: ]; then
+ln -s /external/Download $HOME/termux-box/ubuntu-fs/opt/prefix-tweaks/dosdevices/f:
+fi
+
 cd $HOME/termux-box
 sudo chown -hR $(whoami) ubuntu-fs/root $>/dev/null
 touch ubuntu-fs/root/.hushlogin
 mkdir -p /sdcard/Android/data/com.termux/files/Download &>/dev/null
+mkdir -p ubuntu-fs/external &>/dev/null
 termux-x11 :1 &>/dev/null &
 rm -rf $PREFIX/tmp/pulse-*
 pulseaudio -k >/dev/null 2>&1

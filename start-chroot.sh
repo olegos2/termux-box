@@ -27,6 +27,14 @@ sudo mount --bind /data/data/com.termux/files/usr/tmp $folder/tmp
 sudo mount --bind /storage/emulated/0/ $folder/sdcard
 sudo mount --bind /sdcard/Android/data/com.termux/files $folder/termux
 
+export SECONDARY_STORAGE="$(ls /storage | grep -v '^self$' | grep -v '^emulated$')"
+if [ "$SECONDARY_STORAGE" != "" ]; then
+sudo mount --bind /storage/$SECONDARY_STORAGE $folder/external
+unset SECONDARY_STORAGE
+else
+unset SECONDARY_STORAGE
+fi
+
 sudo chroot $folder /bin/su - root
 sudo umount $folder/dev/pts
 sudo umount $folder/dev
@@ -34,6 +42,7 @@ sudo umount $folder/proc
 sudo umount $folder/tmp
 sudo umount $folder/sdcard
 sudo umount $folder/termux
+sudo umount $folder/external &>/dev/null
 sudo umount $folder/sys
 if [ -f $folder/opt/virgl ]; then
 pkill virgl
