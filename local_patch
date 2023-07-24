@@ -31,6 +31,8 @@ chmod +x start-chroot.sh
 cd $HOME/termux-box/ubuntu-fs
 
 cp /sdcard/Download/patch.tar.xz .
+rm -rf opt/d3d
+rm -rf opt/mesa
 tar -xf patch.tar.xz
 rm -rf patch.tar.xz
 
