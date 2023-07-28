@@ -10,7 +10,7 @@
 After installation the start command in termux is `termux-box`
 
 Download and install
-[Termux](https://f-droid.org/en/packages/com.termux),
+[Termux](https://f-droid.org/repo/com.termux_118.apk),
 [Termux-X11](https://raw.githubusercontent.com/olegos2/termux-box/main/termux-x11-arm64-v8a-debug.apk)
 
 Open termux and paste command
