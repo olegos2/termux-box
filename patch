@@ -6,14 +6,9 @@ mkdir tempscripts
 tar -xf scripts.tar.gz -C tempscripts
 rm -rf scripts.tar.gz
 cd tempscripts
-if [ ! -e ../cores.conf ]; then
-mv cores.conf ..
-fi
-if [ ! -e ../fpscounter.conf ]; then
-mv fpscounter.conf ..
-fi
+cp -n *.conf ..
 cp Env.conf /sdcard/termux-box
-mv Env.conf ..
+cp Env.conf ..
 rm -rf *.conf
 mv * ..
 cd ..
