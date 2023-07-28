@@ -10,7 +10,7 @@ fi
 if [ ! -e update-timestamp ]; then
  latestupdate=$(curl --connect-timeout 6 -s https://raw.githubusercontent.com/olegos2/termux-box/main/update-timestamp)
  if [[ "$latestupdate" = "" ]]; then
-  echo "No internet connetion, try again"
+  echo "No internet connection, try again"
   return
  fi
  echo "$latestupdate">update-timestamp
@@ -83,6 +83,7 @@ elif [ "$negus" = "proot" ]; then
 else
  oleg=2
 fi
+export SECONDARY_STORAGE="$(ls /storage | grep -v '^self$' | grep -v '^emulated$')"
 case $oleg in
 1)
 echo "proot">ubuntu-fs/opt/script.conf

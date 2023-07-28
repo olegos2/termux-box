@@ -18,12 +18,8 @@ command+=" -b ubuntu-fs/root:/dev/shm"
 command+=" -b /sdcard"
 command+=" -b /sdcard/Android/data/com.termux/files:/termux"
 
-export SECONDARY_STORAGE="$(ls /storage | grep -v '^self$' | grep -v '^emulated$')"
 if [ "$SECONDARY_STORAGE" != "" ]; then
 command+=" -b /storage/$SECONDARY_STORAGE:/external"
-unset SECONDARY_STORAGE
-else
-unset SECONDARY_STORAGE
 fi
 
 command+=" /usr/bin/env -i HOME=/root TERM=$TERM PATH=/usr/local/sbin:/usr/local/bin:/bin:/usr/bin:/sbin:/usr/sbin:/usr/games:/usr/local/games LANG=C.UTF-8 /bin/bash --login"
