@@ -18,6 +18,7 @@ command+=" -b ubuntu-fs/root:/dev/shm"
 command+=" -b /sdcard"
 command+=" -b /sdcard/Android/data/com.termux/files:/termux"
 
+export SECONDARY_STORAGE="$(ls /storage | grep -v '^self$' | grep -v '^emulated$')"
 if [ "$SECONDARY_STORAGE" != "" ]; then
 command+=" -b /storage/$SECONDARY_STORAGE:/external"
 fi

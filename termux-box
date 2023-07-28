@@ -83,7 +83,6 @@ elif [ "$negus" = "proot" ]; then
 else
  oleg=2
 fi
-export SECONDARY_STORAGE="$(ls /storage | grep -v '^self$' | grep -v '^emulated$')"
 case $oleg in
 1)
 echo "proot">ubuntu-fs/opt/script.conf
