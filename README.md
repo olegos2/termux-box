@@ -44,8 +44,6 @@ Big thanks to Hugo for help.
 
 ## Third party applications
 
-[Box4Droid](https://github.com/Herick75/Box4Droid)
-
 [Box64](https://github.com/ptitSeb/box64) MIT license
 
 [Box86](https://github.com/ptitSeb/box86) MIT license
