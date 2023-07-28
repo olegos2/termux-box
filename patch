@@ -6,7 +6,7 @@ mkdir tempscripts
 tar -xf scripts.tar.gz -C tempscripts
 rm -rf scripts.tar.gz
 cd tempscripts
-cp -n *.conf ..
+cp -n *.conf .. &>/dev/null
 cp Env.conf /sdcard/termux-box
 cp Env.conf ..
 rm -rf *.conf
