@@ -30,9 +30,9 @@ pkg install root-repo -y &>/dev/null
 rm -rf $HOME/termux-box
 mkdir -p $HOME/termux-box
 cd $HOME/termux-box
-wget https://github.com/olegos2/termux-box/raw/main/termux-x11-1.02.07-0-all.deb &>/dev/null
-dpkg -i termux-x11-1.02.07-0-all.deb &>/dev/null
-rm -rf termux-x11-1.02.07-0-all.deb
+wget https://github.com/olegos2/termux-box/raw/main/termux-x11-1.02.12-0-all.deb &>/dev/null
+dpkg -i termux-x11-1.02.12-0-all.deb &>/dev/null
+rm -rf termux-x11-1.02.12-0-all.deb
 
 echo ""
 echo "Copying preconfigured Rootfs..."
@@ -62,6 +62,8 @@ echo "Installing patch"
 
 cd $HOME/termux-box/ubuntu-fs
 cp /sdcard/Download/patch.tar.xz . &>/dev/null
+rm -rf opt/d3d
+rm -rf opt/mesa
 tar -xf patch.tar.xz
 rm -rf patch.tar.xz
 cd
