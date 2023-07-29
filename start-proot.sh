@@ -1,4 +1,4 @@
-#/bin/bash
+#!/bin/bash
 
 if [ -f ubuntu-fs/opt/virgl ]; then
 pkill virgl
