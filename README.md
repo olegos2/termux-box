@@ -25,11 +25,11 @@ Big thanks to Hugo for help.
 ## Device support
 ### Android
 * `Android 9+` — basic support, may not work
-* `Android 10+` — for root users
-* `Android 11+` — for non-root users
+* `Android 10+` — root users
+* `Android 11+` — non-root users
 ### Render
-* Snapdragon with Adreno 6xx or Adreno 7xx — for Turnip + Zink / Turnip+DXVK with better speed.
-* Qualcomm/Mediatek/Exynos — for VirGL
+* Snapdragon with Adreno 6xx or Adreno 7xx — Turnip + Zink / Turnip + DXVK with better speed.
+* Qualcomm/Mediatek/Exynos — VirGL
 
 ## Features
 * `Termux-box` has automatic updates, so you don't have to reinstall it so often.
