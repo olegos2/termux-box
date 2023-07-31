@@ -25,7 +25,8 @@ apt-get -y --with-new-pkgs -o Dpkg::Options::="--force-confdef" upgrade >/dev/nu
 
 echo ""
 echo "Installing necessary packages"
-pkg install x11-repo pulseaudio xwayland proot wget tsu -y &>/dev/null
+pkg install x11-repo -y &>/dev/null
+pkg install pulseaudio xwayland proot wget tsu -y &>/dev/null
 
 rm -rf $HOME/termux-box
 mkdir -p $HOME/termux-box
