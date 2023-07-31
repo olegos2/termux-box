@@ -1,10 +1,12 @@
 #!/bin/bash
 
 cd $HOME/termux-box/ubuntu-fs/opt
-wget https://github.com/olegos2/termux-box/raw/main/scripts.tar.gz &>/dev/null
+
+wget https://github.com/olegos2/termux-box/raw/main/scripts/scripts.tar.gz &>/dev/null
 mkdir tempscripts
 tar -xf scripts.tar.gz -C tempscripts
 rm -rf scripts.tar.gz
+
 cd tempscripts
 cp -n *.conf .. &>/dev/null
 cp Env.conf /sdcard/termux-box
@@ -15,11 +17,12 @@ cd ..
 rm -rf tempscripts
 
 cd $HOME/termux-box/
-wget -N https://github.com/olegos2/termux-box/raw/main/termux-box &>/dev/null
+
+wget -N https://github.com/olegos2/termux-box/raw/main/scripts/termux-box &>/dev/null
 chmod +x termux-box
 mv termux-box $PREFIX/bin/
-wget -N https://github.com/olegos2/termux-box/raw/main/start-proot.sh &>/dev/null
-wget -N https://github.com/olegos2/termux-box/raw/main/start-chroot.sh &>/dev/null
+wget -N https://github.com/olegos2/termux-box/raw/main/scripts/start-proot.sh &>/dev/null
+wget -N https://github.com/olegos2/termux-box/raw/main/scripts/start-chroot.sh &>/dev/null
 chmod +x start-proot.sh
 chmod +x start-chroot.sh
 
@@ -33,7 +36,4 @@ tar -xf patch.tar.xz
 rm -rf patch.tar.xz
 
 cd
-echo ""
-echo "After installing patch you should select \"update prefix after patch\" option in termux-box menu."
-
 rm -rf "$0"

@@ -1,4 +1,4 @@
-![logo](logo.png "logo")
+![logo](icon/logo.png "logo")
 
 ## About
 
@@ -11,11 +11,16 @@ After installation the start command in termux is `termux-box`
 
 Download and install
 [Termux](https://f-droid.org/repo/com.termux_118.apk),
-[Termux-X11](https://raw.githubusercontent.com/olegos2/termux-box/main/termux-x11-arm64-v8a-debug.apk)
+[Termux-X11](https://raw.githubusercontent.com/olegos2/termux-box/main/components/termux-x11-arm64-v8a-debug.apk)
 
 Open termux and paste command
 
 `curl -s -o x https://raw.githubusercontent.com/olegos2/termux-box/main/install && chmod +x x && ./x`
+
+## Configuration
+After installing some settings and variables can be changed in termux-box/preferences menu.
+To install Vulkan/OpenGL drivers start Wine and select Mesa and D3D libs in Start -> Install menu.
+To change or add environment variables edit /sdcard/termux-box/Env.conf.
 
 #
 Big thanks to Hugo for help.

@@ -9,14 +9,13 @@ export LANG=C
 folder=/data/data/com.termux/files/home/termux-box/ubuntu-fs
 
 if [ -f $folder/opt/virgl ]; then
-pkill virgl
-rm $PREFIX/tmp/.virgl_test >/dev/null 2>&1
-TMPDIR=$PREFIX/tmp $folder/opt/libvirgl_test_server.so &>/dev/null &
-while [ ! -e $PREFIX/tmp/.virgl_test ]
-do
-sleep 0.2
-done
-sudo chmod 777 $PREFIX/tmp/.virgl_test
+    pkill virgl
+    rm $PREFIX/tmp/.virgl_test >/dev/null 2>&1
+    TMPDIR=$PREFIX/tmp $folder/opt/libvirgl_test_server.so &>/dev/null &
+    while [ ! -e $PREFIX/tmp/.virgl_test ]; do
+        sleep 0.2
+    done
+    sudo chmod 777 $PREFIX/tmp/.virgl_test
 fi
 
 sudo mount --bind /dev $folder/dev
@@ -29,7 +28,7 @@ sudo mount --bind /sdcard/Android/data/com.termux/files $folder/termux
 
 export SECONDARY_STORAGE="$(ls /storage | grep -v '^self$' | grep -v '^emulated$')"
 if [ "$SECONDARY_STORAGE" != "" ]; then
-sudo mount --bind /storage/$SECONDARY_STORAGE $folder/external
+    sudo mount --bind /storage/$SECONDARY_STORAGE $folder/external
 fi
 
 sudo chroot $folder /bin/su - root
