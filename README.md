@@ -18,9 +18,9 @@ Open termux and paste command
 `curl -s -o x https://raw.githubusercontent.com/olegos2/termux-box/main/install && chmod +x x && ./x`
 
 ## Configuration
-After installing some settings and variables can be changed in termux-box/preferences menu.
-To install Vulkan/OpenGL drivers start Wine and select Mesa and D3D libs in Start -> Install menu.
-To change or add environment variables edit /sdcard/termux-box/Env.conf.
+After installing termux-box some settings and variables can be changed in termux-box/preferences menu.
+To install Vulkan/OpenGL drivers you should start Wine and select Mesa and D3D libs in Start Menu -> Install.
+To change or add environment variables edit config located at `/sdcard/termux-box/Env.conf`.
 
 #
 Big thanks to Hugo for help.
