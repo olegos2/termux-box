@@ -27,6 +27,7 @@ chmod +x start-proot.sh
 chmod +x start-chroot.sh
 
 cd $HOME/termux-box/ubuntu-fs
+touch opt/prefix-apply-patch
 
 rm -rf patch.tar.xz
 wget -q --show-progress https://github.com/olegos2/termux-box/releases/download/0.0.1-alpha/patch.tar.xz
