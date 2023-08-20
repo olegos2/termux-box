@@ -17,6 +17,12 @@ Open termux and paste command
 
 `curl -s -o x https://raw.githubusercontent.com/olegos2/termux-box/main/install && chmod +x x && ./x`
 
+### Additional components
+Updated
+[Termux-X11](https://raw.githubusercontent.com/olegos2/termux-box/main/components/termux-x11-arm64-v8a-debug-latest.apk)
+for dri3 turnip mode.
+##
+
 ## Configuration
 After installing termux-box some settings and variables can be changed in termux-box/preferences menu.
 To install Vulkan/OpenGL drivers you should start Wine and select Mesa and D3D libs in Start Menu -> Install.
