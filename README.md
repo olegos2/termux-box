@@ -7,6 +7,12 @@
 `Termux-box` is not Box64Droid neither Box4Droid.
 
 ## Installation
+### Additional components
+Updated
+[Termux-X11](https://raw.githubusercontent.com/olegos2/termux-box/main/components/termux-x11-arm64-v8a-debug-latest.apk)
+for dri3 turnip mode.
+##
+
 After installation the start command in termux is `termux-box`
 
 Download and install
