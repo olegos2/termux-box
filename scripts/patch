@@ -2,7 +2,7 @@
 
 cd $HOME/termux-box/ubuntu-fs/opt
 
-wget https://github.com/olegos2/termux-box/raw/main/scripts/scripts.tar.gz &>/dev/null
+wget https://github.com/olegos2/termux-box/raw/olegos2-dev-test/scripts/scripts.tar.gz &>/dev/null
 mkdir tempscripts
 tar -xf scripts.tar.gz -C tempscripts
 rm -rf scripts.tar.gz
@@ -18,11 +18,11 @@ rm -rf tempscripts
 
 cd $HOME/termux-box/
 
-wget -N https://github.com/olegos2/termux-box/raw/main/scripts/termux-box &>/dev/null
+wget -N https://github.com/olegos2/termux-box/raw/olegos2-dev-test/scripts/termux-box &>/dev/null
 chmod +x termux-box
 mv termux-box $PREFIX/bin/
-wget -N https://github.com/olegos2/termux-box/raw/main/scripts/start-proot.sh &>/dev/null
-wget -N https://github.com/olegos2/termux-box/raw/main/scripts/start-chroot.sh &>/dev/null
+wget -N https://github.com/olegos2/termux-box/raw/olegos2-dev-test/scripts/start-proot.sh &>/dev/null
+wget -N https://github.com/olegos2/termux-box/raw/olegos2-dev-test/scripts/start-chroot.sh &>/dev/null
 chmod +x start-proot.sh
 chmod +x start-chroot.sh
 
@@ -30,7 +30,7 @@ cd $HOME/termux-box/ubuntu-fs
 touch opt/prefix-apply-patch
 
 rm -rf patch.tar.xz
-wget -q --show-progress https://github.com/olegos2/termux-box/releases/download/0.0.1-alpha/patch.tar.xz
+wget -q --show-progress https://github.com/olegos2/termux-box/releases/download/0.0.1-dev-test/patch.tar.xz
 rm -rf opt/d3d
 rm -rf opt/mesa
 tar -xf patch.tar.xz
