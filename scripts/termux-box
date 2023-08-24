@@ -108,6 +108,8 @@ esac
 
 rm -rf $PREFIX/tmp/pulse-*
 pulseaudio -k >/dev/null 2>&1
+pkill -f pulseaudio
+pkill -f proot
 pkill -f "app_process / com.termux.x11"
 
 if [ -e ~/termux-box/ubuntu-fs/opt/restart-termux-box ]; then
