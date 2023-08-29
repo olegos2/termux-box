@@ -2,7 +2,7 @@
 
 English
 &nbsp;&nbsp;| &nbsp;&nbsp;
-<a href="https://github.com/girshcatt/termux-box/blob/main/README-ru.md">Русский</a>
+<a href="https://github.com/olegos2/termux-box/blob/main/README-ru.md">Русский</a>
 
 ## About
 
