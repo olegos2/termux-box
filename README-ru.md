@@ -29,7 +29,7 @@
 
 ## Конфигурация
 После установки termux-box некоторые настройки и переменные могут быть изменены в termux-box/preferences меню.
-Чтобы установить Vulkan/OpenGL драйвера вам нужно запустить Wine и выбрать Mesa и D3D библиотеки в меню Пуск -> Install.
+Чтобы установить Vulkan/OpenGL драйвера вам нужно запустить Wine и выбрать Mesa и D3D библиотеки в меню Пуск -> Установка.
 Для изменения или добавления переменной среды редактируйте конфигурацию расположенную в `/sdcard/termux-box/Env.conf`.
 
 #
@@ -47,15 +47,15 @@
 * Qualcomm/Mediatek/Exynos — VirGL
 
 ## Возможности
-* `Termux-box` has automatic updates, so you don't have to reinstall it so often.
-* TFM works a lot faster with custom wine.
-* The most lightweight rootfs.
-* `Proot` which is faster than proot-distro.
-* `Chroot` with working VirGL for root users
-* VirGL server with dxtn support (termux virgl doesn't have this). Mesa-VirGL 18.3.0, 19.1.8, 22.1.7.
-* `Turnip` with adreno 610 and 7xx support. `Mesa-zink-11.06.22` built from alexvorxx repo which is faster and has better compatibility. `D8VK + DXVK + VKD3D` and `WineD3D`.
-* `Prefix-tweaks` script that automatically installs DirectX, 7-Zip, various registry fixes, better taskmgr and notepad. Custom theme, better fonts which give a lot better look compared to default wine prefix. Better icons. E:\ (Android/data/com.termux/files/Download folder) for faster performance without having to copy games to C:\ drive
-* Experimental `wine-tweaks` script that automatically installs downloaded wine, customizes it for better TFM speed and reduces size
+* `Termux-box` обновляется автоматически, вам необязательно преустанавливать его каждый раз.
+* TFM работает значительно быстрее с кастомным wine.
+* Самые маловесящие rootfs.
+* `Proot` который быстрее чем proot-distro.
+* `Chroot` с рабочим VirGL для root пользователей
+* VirGL сервер с поддержкой dxtn (termux virgl не может так сделать). Mesa-VirGL 18.3.0, 19.1.8, 22.1.7.
+* `Turnip` с поддержкой adreno 610 and 7xx. `Mesa-zink-11.06.22` созданный с репозитория alexvorxx который быстрее и имеет большую совместимость. `D8VK + DXVK + VKD3D` и `WineD3D`.
+* `Prefix-tweaks` скрипт колторый автоматически устанавливает DirectX, 7-Zip, вариативные фиксы регистра, улучшенный диспетчер задач и заметки. Кастомная тема, улучшенные шрифты которые выглядят намного лучше в сравнении с обычными. Улучшенные иконки. E:\ (Android/data/com.termux/files/Download folder) для лучшей производительности без надобности копировать игры на диск C:\
+* Эксперементальный `wine-tweaks` скрипт автоматически устанавливаемый загруженный wine, кастомизирующий его для лучшей скорости TFM и уменьшенного размера
 
 ## Сторонние приложения
 
