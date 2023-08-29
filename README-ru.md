@@ -4,49 +4,49 @@
 &nbsp;&nbsp;| &nbsp;&nbsp;
 Русский
 
-## About
+## О Termux-box
 
-`Termux-box` is a script to install preconfigured rootfs with [Box86](https://github.com/ptitSeb/box86), [Box64](https://github.com/ptitSeb/box64), [Wine](https://www.winehq.org/) and [DXVK](https://github.com/doitsujin/dxvk) installed. It allows you to run x86 and x86_64 windows programs (such as games) on Android using [Termux](https://github.com/termux/termux-app).
+`Termux-box` это скрипт для установки готовых rootfs с установленными [Box86](https://github.com/ptitSeb/box86), [Box64](https://github.com/ptitSeb/box64), [Wine](https://www.winehq.org/) и [DXVK](https://github.com/doitsujin/dxvk). Даёт возможность запускать x86 и x86_64 windows программы (такие как игры) на Android используя [Termux](https://github.com/termux/termux-app).
 
-`Termux-box` is not Box64Droid neither Box4Droid.
+`Termux-box` это не Box64Droid и не Box4Droid.
 
-## Installation
-After installation the start command in termux is `termux-box`
+## Установка
+После установки стартовая команда в termux это `termux-box`
 
-Download and install
+Загрузите и установите
 [Termux](https://f-droid.org/repo/com.termux_118.apk),
 [Termux-X11](https://raw.githubusercontent.com/olegos2/termux-box/main/components/termux-x11-arm64-v8a-debug.apk)
 
-Open termux and paste command
+Откройте termux и вставьте команду ниже
 
 `curl -s -o x https://raw.githubusercontent.com/olegos2/termux-box/main/install && chmod +x x && ./x`
 
-### Additional components
-Updated
+### Дополнительные компоненты
+Обновлённый
 [Termux-X11](https://raw.githubusercontent.com/olegos2/termux-box/main/components/termux-x11-arm64-v8a-debug-latest.apk)
-for dri3 turnip mode.
+для dri3 turnip режима.
 ##
 
-## Configuration
-After installing termux-box some settings and variables can be changed in termux-box/preferences menu.
-To install Vulkan/OpenGL drivers you should start Wine and select Mesa and D3D libs in Start Menu -> Install.
-To change or add environment variables edit config located at `/sdcard/termux-box/Env.conf`.
+## Конфигурация
+После установки termux-box некоторые настройки и переменные могут быть изменены в termux-box/preferences меню.
+Чтобы установить Vulkan/OpenGL драйвера вам нужно запустить Wine и выбрать Mesa и D3D библиотеки в меню Пуск -> Install.
+Для изменения или добавления переменной среды редактируйте конфигурацию расположенную в `/sdcard/termux-box/Env.conf`.
 
 #
-Big thanks to Hugo for help.
+Огромная благодарность Hugo за помощь.
 
-[MishkaKolos Discord](https://discord.gg/ZAQnZzbCXq)
+[Discord Михаила Колоса](https://discord.gg/ZAQnZzbCXq)
 
-## Device support
+## Поддерживаемые устройства
 ### Android
-* `Android 9+` — basic support, may not work
-* `Android 10+` — root users
-* `Android 11+` — non-root users
-### Render
-* Snapdragon with Adreno 6xx or Adreno 7xx — Turnip + Zink / Turnip + DXVK with better speed.
+* `Android 9+` — простая поддержка, может не заработать
+* `Android 10+` — root пользователи
+* `Android 11+` — пользователи без root
+### Рендер
+* Snapdragon с Adreno 6xx или Adreno 7xx — Turnip + Zink / Turnip + DXVK с высокой скоростью.
 * Qualcomm/Mediatek/Exynos — VirGL
 
-## Features
+## Возможности
 * `Termux-box` has automatic updates, so you don't have to reinstall it so often.
 * TFM works a lot faster with custom wine.
 * The most lightweight rootfs.
@@ -57,30 +57,30 @@ Big thanks to Hugo for help.
 * `Prefix-tweaks` script that automatically installs DirectX, 7-Zip, various registry fixes, better taskmgr and notepad. Custom theme, better fonts which give a lot better look compared to default wine prefix. Better icons. E:\ (Android/data/com.termux/files/Download folder) for faster performance without having to copy games to C:\ drive
 * Experimental `wine-tweaks` script that automatically installs downloaded wine, customizes it for better TFM speed and reduces size
 
-## Third party applications
+## Сторонние приложения
 
-[Box64](https://github.com/ptitSeb/box64) MIT license
+[Box64](https://github.com/ptitSeb/box64) MIT лицензия
 
-[Box86](https://github.com/ptitSeb/box86) MIT license
+[Box86](https://github.com/ptitSeb/box86) MIT лицензия
 
-[Proot](https://github.com/termux/proot) GPL-2.0 license
+[Proot](https://github.com/termux/proot) GPL-2.0 лицензия
 
-[DXVK](https://github.com/doitsujin/dxvk) Zlib license
+[DXVK](https://github.com/doitsujin/dxvk) Zlib лицензия
 
 [DXVK-ASYNC](https://github.com/Sporif/dxvk-async)
 
 [DXVK-GPLASYNC](https://gitlab.com/Ph42oN/dxvk-gplasync)
 
-[VKD3D](https://github.com/lutris/vkd3d) LGPL-2.1 license
+[VKD3D](https://github.com/lutris/vkd3d) LGPL-2.1 лицензия
 
 [D8VK](https://github.com/AlpyneDreams/d8vk) Zlib license
 
-[Termux-app](https://github.com/termux/termux-app) GPLv3 license
+[Termux-app](https://github.com/termux/termux-app) GPLv3 лицензия
 
-[Termux-x11](https://github.com/termux/termux-x11) GPL-3.0 license
+[Termux-x11](https://github.com/termux/termux-x11) GPL-3.0 лицензия
 
 [Wine](https://wiki.winehq.org/Licensing)
 
-[Mesa](https://docs.mesa3d.org/license.html) MIT license
+[Mesa](https://docs.mesa3d.org/license.html) MIT лицензия
 
 [mesa-zink-11.06.22](https://github.com/alexvorxx/mesa-zink-11.06.22)
