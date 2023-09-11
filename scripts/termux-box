@@ -3,8 +3,20 @@
 cd $HOME/termux-box
 
 if [ ! -e ubuntu-fs/opt/wine ]; then
+    echo "Select which Wine to download"
+    echo "1) 8.2 staging"
+    echo "2) 8.14 ge-custom"
+    read opcode
+    case $opcode in
+    1)
     wget -q --show-progress https://github.com/Kron4ek/Wine-Builds/releases/download/8.2/wine-8.2-staging-amd64.tar.xz
     mv wine-8.2-staging-amd64.tar.xz ubuntu-fs/opt/wine.tar.xz
+    ;;
+    2)
+    wget -q --show-progress https://github.com/GloriousEggroll/wine-ge-custom/releases/download/GE-Proton8-14/wine-lutris-GE-Proton8-14-x86_64.tar.xz
+    mv wine-lutris-GE-Proton8-14-x86_64.tar.xz ubuntu-fs/opt/wine.tar.xz
+    ;;
+    esac
 fi
 
 if [ ! -e update-timestamp ]; then
