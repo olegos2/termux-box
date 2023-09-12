@@ -100,21 +100,14 @@ fi
 case $oleg in
 1)
     echo "proot">ubuntu-fs/opt/script.conf
-    if [[ "$(sudo a)" = *"Are you rooted?"* ]]; then
-        ./start-proot.sh
-    else
-        echo "Warning! Using proot with root is unstable!"
-        sleep 3
-        sudo chown -hR root ubuntu-fs/root $>/dev/null
-        sudo ./start-proot.sh
-        sudo chown -hR $(whoami) ubuntu-fs/root $>/dev/null
-    fi
+    ./start-proot.sh
     ;;
 2)
     echo "chroot">ubuntu-fs/opt/script.conf
     sudo chown -hR root ubuntu-fs/root $>/dev/null
     sudo ./start-chroot.sh
-    sudo chown -hR $(whoami) ubuntu-fs/root $>/dev/null
+    realuser=$(id -u)
+    sudo chown -hR $realuser:$realuser ubuntu-fs/root $>/dev/null
     ;;
 esac
 
