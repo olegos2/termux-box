@@ -61,7 +61,7 @@ else
         if [ "$sel" = "Y" ] || [ "$sel" = "y" ]; then
             curl -s -o ~/y https://raw.githubusercontent.com/olegos2/termux-box/main/scripts/patch
             chmod +x ~/y
-            if ! ~/y 2>/dev/null; then
+            if ! ~/y; then
             echo "Update failed. If this problem remains, try to force stop termux"
             exit
             fi
