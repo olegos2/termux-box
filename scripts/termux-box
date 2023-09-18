@@ -57,7 +57,10 @@ else
         if [ "$sel" = "Y" ] || [ "$sel" = "y" ]; then
             curl -s -o ~/y https://raw.githubusercontent.com/olegos2/termux-box/main/scripts/patch
             chmod +x ~/y
-            ~/y
+            if ! ~/y 2>/dev/null; then
+            echo "Update failed. If this problem remains, force stop termux"
+            exit
+            fi
             echo "$latestupdate">~/termux-box/update-timestamp
             exec $PREFIX/bin/termux-box
         else
