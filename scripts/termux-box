@@ -56,7 +56,7 @@ else
             curl -s -o ~/y https://raw.githubusercontent.com/olegos2/termux-box/main/scripts/patch
             chmod +x ~/y
             if ! ~/y 2>/dev/null; then
-            echo "Update failed. If this problem remains, force stop termux"
+            echo "Update failed. If this problem remains, try to force stop termux"
             exit
             fi
             echo "$latestupdate">~/termux-box/update-timestamp
