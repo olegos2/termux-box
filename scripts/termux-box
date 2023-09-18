@@ -9,10 +9,16 @@ if [ ! -e ubuntu-fs/opt/wine ]; then
     read opcode
     case $opcode in
     1)
-    wget -q --show-progress https://github.com/Kron4ek/Wine-Builds/releases/download/8.2/wine-8.2-staging-amd64.tar.xz -O ubuntu-fs/opt/wine.tar.xz
+    if ! wget -q --show-progress https://github.com/Kron4ek/Wine-Builds/releases/download/8.2/wine-8.2-staging-amd64.tar.xz -O ubuntu-fs/opt/wine.tar.xz; then
+    echo "Download failed, restart termux-box"
+    exit
+    fi
     ;;
     2)
-    wget -q --show-progress https://github.com/GloriousEggroll/wine-ge-custom/releases/download/GE-Proton8-14/wine-lutris-GE-Proton8-14-x86_64.tar.xz -O ubuntu-fs/opt/wine.tar.xz
+    if ! wget -q --show-progress https://github.com/GloriousEggroll/wine-ge-custom/releases/download/GE-Proton8-14/wine-lutris-GE-Proton8-14-x86_64.tar.xz -O ubuntu-fs/opt/wine.tar.xz; then
+    echo "Download failed, restart termux-box"
+    exit
+    fi
     ;;
     esac
 fi
