@@ -1,6 +1,6 @@
 ![logo](icon/logo.png "logo")
 
-<a href="https://github.com/girshcatt/termux-box/blob/main/README.md">English</a>
+<a href="https://github.com/olegos2/termux-box">English</a>
 &nbsp;&nbsp;| &nbsp;&nbsp;
 Русский
 
