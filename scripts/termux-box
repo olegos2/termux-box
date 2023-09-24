@@ -80,7 +80,6 @@ if [ ! -L $HOME/termux-box/ubuntu-fs/opt/prefix-tweaks/dosdevices/f: ]; then
 fi
 
 cd $HOME/termux-box
-sudo chown -hR $(whoami) ubuntu-fs/root $>/dev/null
 touch ubuntu-fs/root/.hushlogin
 mkdir -p /sdcard/Android/data/com.termux/files/Download &>/dev/null
 mkdir -p ubuntu-fs/external &>/dev/null
@@ -111,10 +110,7 @@ case $oleg in
     ;;
 2)
     echo "chroot">ubuntu-fs/opt/script.conf
-    sudo chown -hR root ubuntu-fs/root $>/dev/null
     sudo ./start-chroot.sh
-    realuser=$(id -u)
-    sudo chown -hR $realuser:$realuser ubuntu-fs/root $>/dev/null
     ;;
 esac
 
