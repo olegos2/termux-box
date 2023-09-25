@@ -30,7 +30,7 @@ for dri3 turnip mode.
 ## Configuration
 After installing termux-box some settings and variables can be changed in termux-box/preferences menu.
 To install Vulkan/OpenGL drivers you should start Wine and select Mesa and D3D libs in Start Menu -> Install.
-To change or add environment variables edit config located at `/sdcard/termux-box/Env.conf`.
+To change or add environment variables edit config saved in `/sdcard/termux-box/Env.conf`.
 
 #
 Big thanks to Hugo for help.
