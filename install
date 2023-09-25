@@ -77,4 +77,4 @@ echo "Starting termux-box now. Next time use \"termux-box\" command to run it."
 sleep 2
 
 rm -rf "$0"
-. $PREFIX/bin/termux-box
+exec $PREFIX/bin/termux-box
