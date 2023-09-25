@@ -110,6 +110,7 @@ case $oleg in
     ;;
 2)
     echo "chroot">ubuntu-fs/opt/script.conf
+    sudo chown -hR root:root ubuntu-fs/root
     sudo ./start-chroot.sh
     ;;
 esac
