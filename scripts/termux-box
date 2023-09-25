@@ -112,6 +112,8 @@ case $oleg in
     echo "chroot">ubuntu-fs/opt/script.conf
     sudo chown -hR root:root ubuntu-fs/root
     sudo ./start-chroot.sh
+    prootuser=$(id -u)
+    sudo chown -hR $prootuser:$prootuser ubuntu-fs
     ;;
 esac
 
