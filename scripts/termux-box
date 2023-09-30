@@ -12,12 +12,16 @@ if [ ! -e ubuntu-fs/opt/wine ]; then
     if ! wget -q --show-progress https://github.com/Kron4ek/Wine-Builds/releases/download/8.2/wine-8.2-staging-amd64.tar.xz -O ubuntu-fs/opt/wine.tar.xz; then
     echo "Download failed, restart termux-box"
     exit
+    else
+    tar -xf ubuntu-fs/opt/box/old-box.tar.xz -C ubuntu-fs/usr/local/bin
     fi
     ;;
     2)
     if ! wget -q --show-progress https://github.com/GloriousEggroll/wine-ge-custom/releases/download/GE-Proton8-14/wine-lutris-GE-Proton8-14-x86_64.tar.xz -O ubuntu-fs/opt/wine.tar.xz; then
     echo "Download failed, restart termux-box"
     exit
+    else
+    tar -xf ubuntu-fs/opt/box/new-box.tar.xz -C ubuntu-fs/usr/local/bin
     fi
     ;;
     esac
