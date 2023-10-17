@@ -19,7 +19,9 @@
 
 Откройте termux и вставьте команду ниже
 
-`curl -s -o x https://raw.githubusercontent.com/olegos2/termux-box/main/install && chmod +x x && ./x`
+```bash
+curl -s -o x https://raw.githubusercontent.com/olegos2/termux-box/main/install && chmod +x x && ./x
+```
 
 ### Дополнительные компоненты
 Обновлённый
