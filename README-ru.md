@@ -6,12 +6,12 @@
 
 ## О Termux-box
 
-`Termux-box` это скрипт для установки готовых rootfs с установленными [Box86](https://github.com/ptitSeb/box86), [Box64](https://github.com/ptitSeb/box64), [Wine](https://www.winehq.org/) и [DXVK](https://github.com/doitsujin/dxvk). Даёт возможность запускать x86 и x86_64 windows программы (такие как игры) на Android используя [Termux](https://github.com/termux/termux-app).
+`Termux-box` это скрипт для установки готовых rootfs, с установленными [Box86](https://github.com/ptitSeb/box86), [Box64](https://github.com/ptitSeb/box64), [Wine](https://www.winehq.org/) и [DXVK](https://github.com/doitsujin/dxvk). Даёт возможность запускать x86 и x86_64 windows программы (такие как игры) на Android, используя [Termux](https://github.com/termux/termux-app).
 
 `Termux-box` это не Box64Droid и не Box4Droid.
 
 ## Установка
-После установки стартовая команда в termux это `termux-box`
+Стартовая команда в termux после установки это `termux-box`
 
 Загрузите и установите
 [Termux](https://f-droid.org/repo/com.termux_118.apk),
@@ -32,7 +32,7 @@ curl -s -o x https://raw.githubusercontent.com/olegos2/termux-box/main/install &
 ## Конфигурация
 После установки termux-box некоторые настройки и переменные могут быть изменены в termux-box/preferences меню.
 Чтобы установить Vulkan/OpenGL драйвера вам нужно запустить Wine и выбрать Mesa и D3D библиотеки в меню Пуск -> Установка.
-Для изменения или добавления переменной среды редактируйте конфигурацию сохранённую в `/sdcard/termux-box/Env.conf`.
+Для изменения или добавления переменной среды редактируйте конфигурацию, сохранённую в `/sdcard/termux-box/Env.conf`.
 
 #
 Огромная благодарность Hugo за помощь.
@@ -52,12 +52,12 @@ curl -s -o x https://raw.githubusercontent.com/olegos2/termux-box/main/install &
 * `Termux-box` обновляется автоматически, вам необязательно преустанавливать его каждый раз.
 * TFM работает значительно быстрее с кастомным wine.
 * Самые маловесящие rootfs.
-* `Proot` который быстрее чем proot-distro.
+* `Proot`, который быстрее чем proot-distro.
 * `Chroot` с рабочим VirGL для root пользователей
 * VirGL сервер с поддержкой dxtn (termux virgl не может так сделать). Mesa-VirGL 18.3.0, 19.1.8, 22.1.7.
-* `Turnip` с поддержкой adreno 610 and 7xx. `Mesa-zink-11.06.22` созданный с репозитория alexvorxx который быстрее и имеет большую совместимость. `D8VK + DXVK + VKD3D` и `WineD3D`.
-* `Prefix-tweaks` скрипт колторый автоматически устанавливает DirectX, 7-Zip, вариативные фиксы регистра, улучшенный диспетчер задач и заметки. Кастомная тема, улучшенные шрифты которые выглядят намного лучше в сравнении с обычными. Улучшенные иконки. E:\ (Android/data/com.termux/files/Download folder) для лучшей производительности без надобности копировать игры на диск C:\
-* Эксперементальный `wine-tweaks` скрипт автоматически устанавливаемый загруженный wine, кастомизирующий его для лучшей скорости TFM и уменьшенного размера
+* `Turnip` с поддержкой adreno 610 and 7xx. `Mesa-zink-11.06.22`, взятый с репозитория alexvorxx, который быстрее и имеет большую совместимость. `D8VK + DXVK + VKD3D` и `WineD3D`.
+* `Prefix-tweaks` скрипт, который автоматически устанавливает DirectX, 7-Zip, вариативные фиксы регистра, улучшенный диспетчер задач и заметки. Кастомная тема, улучшенные шрифты, которые выглядят намного лучше, по сравнении с обычными. Улучшенные иконки. E:\ (Android/data/com.termux/files/Download folder) для лучшей производительности, без надобности копировать игры на диск C:\
+* Экспериментальный скрипт `wine-tweaks`, который автоматически устанавливает загруженный ранее wine, кастомизирующий его для лучшей скорости TFM и уменьшенного размера
 
 ## Сторонние приложения
 
