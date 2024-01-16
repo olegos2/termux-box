@@ -3,6 +3,8 @@
 <a href="https://github.com/olegos2/termux-box">English</a>
 &nbsp;&nbsp;| &nbsp;&nbsp;
 Русский
+&nbsp;&nbsp;| &nbsp;&nbsp;
+<a href="https://github.com/olegos2/termux-box/blob/main/README-pl.md">Polski</a>
 
 ## О Termux-box
 
